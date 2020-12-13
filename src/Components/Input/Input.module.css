@@ -13,3 +13,8 @@
 .input {
     width: 100px;
 }
+
+.inputError {
+    border: 3px red solid;
+    background-color: #fc5f5f;
+}

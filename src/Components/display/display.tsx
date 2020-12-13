@@ -2,7 +2,7 @@ import React from "react";
 import s from "./display.module.css"
 
 type DisplayType = {
-    value: number,
+    value: number| string,
     maxValue: number,
 }
 
