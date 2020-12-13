@@ -3,12 +3,22 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.App-left {
+  background-color: #282c34;
+  height: 500px;
+  width: 500px;
+  border: 5px #0592cd solid;
+  border-radius: 20px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
-
-.App-header {
+.App-right {
   background-color: #282c34;
   height: 500px;
   width: 500px;
@@ -21,18 +31,20 @@
 }
 
 .display {
-  height: 130px;
-  width: 260px;
+  height: 200px;
+  width: 380px;
   border: 3px #0592cd solid;
   border-radius: 20px;
   font-size: 50px;
   color: white;
   background-color: #0592cd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
 .buttons {
   height: 90px;
-  width: 260px;
+  width: 380px;
   border: 3px #0592cd solid;
   border-radius: 20px;
   padding-top: 30px;
