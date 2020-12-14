@@ -3,15 +3,23 @@ import './App.css';
 import Button from "./Components/button/button";
 import Display from "./Components/display/display";
 import Input from "./Components/Input/Input";
-import s from "./Components/Input/Input.module.css";
-
-
-// добавить сохранение в локалсторадж
 
 function App() {
+    const initialStateForMax = () => {
+        if (localStorage.getItem("maxValue")) {return Number.parseInt(localStorage.getItem("maxValue") as string)
+        } else {
+            return 0
+        }
+    }; //фяк возвращает либо значение из локалСторедж, или если его нет то 0
+    const initialStateForStart = () => {
+        if (localStorage.getItem("startValue")) {return Number.parseInt(localStorage.getItem("startValue") as string)
+        } else {
+            return 0
+        }
+    }; // фяк возвращает либо значение из локалСторедж, или если его нет то 0
     let [valueCounter, setValueCounter] = useState<number>(0); //usestate для значения счетчика
-    let [maxValue, setMaxValue] = useState<number>(0)  // usestate для максимального значения
-    let [startValue, setStartValue] = useState<number>(0)  // usestate для стартового значения
+    let [maxValue, setMaxValue] = useState<number>(initialStateForMax())  // usestate для максимального значения
+    let [startValue, setStartValue] = useState<number>(initialStateForStart())  // usestate для стартового значения
     let [buttonSetDisableStatus, setButtonSetDisableStatus] = useState<boolean>(false) // // usestate для отображения кнопки сет
     const addButtonStatus = valueCounter >= maxValue; // дисейбл для кнопки адд
     const resetButtonStatus = valueCounter <= startValue; // дисейбл для кн ресет
@@ -29,6 +37,8 @@ function App() {
     const onClickSetButton = () => {
         setValueCounter(startValue); // устанавливаем значение в дисплей
         setButtonSetDisableStatus(true) // делаем кнопку после нажатия неактивной, потом активность возвращаем при изменении инпутов
+        localStorage.setItem("maxValue", String(maxValue))
+        localStorage.setItem("startValue", String(startValue))
     }; // обработчик нажатия на set
     const onChangeForMaxValue = (i: number) => {
         setMaxValue(i)
