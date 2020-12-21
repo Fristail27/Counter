@@ -1,18 +1,14 @@
-.red {
-    color: red;
-}
-.AppRight {
+.AppLeft {
     background-color: #282c34;
     height: 500px;
     width: 500px;
+    border: 5px #0592cd solid;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border: 5px #0592cd solid;
-    border-radius: 20px;
 }
-
 .display {
     height: 200px;
     width: 380px;
