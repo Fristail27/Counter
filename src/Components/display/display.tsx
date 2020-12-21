@@ -4,7 +4,7 @@ import Button from "../button/button";
 
 type DisplayType = {
     maxValue: number
-    value: number | "Введите значения и нажмите SET"
+    value: number | "Введите значения и нажмите SET" | "Введите корректное значение"
     nameForResetBtn: string
     nameForAddBtn: string
     disabledStatusForAddBtn: boolean
