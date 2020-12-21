@@ -20,7 +20,7 @@ function App() {
     const resetButtonStatus = valueCounter <= startValue; // дисейбл для кн ресет
     const maxValueError = (maxValue <= startValue) || (maxValue < 0) // условие для ошибки для поля с макс значением
     const startValueError = (maxValue <= startValue) || (startValue < 0) // условие для ошибки для поля со стартовым значением
-    const setButtonDisableStatus = (maxValue < startValue) || (maxValue < 0) || (startValue < 0) // условия при которых кнопка сет должна гаснуть, если какое то сработает то возвращают false, вставляется в пропсы кнопки сет и перерисовывает при каждом изменении инпутов
+    const setButtonDisableStatus = (maxValue < startValue) || (maxValue < 0) || (startValue < 0) || maxValueError || startValueError // условия при которых кнопка сет должна гаснуть, если какое то сработает то возвращают false, вставляется в пропсы кнопки сет и перерисовывает при каждом изменении инпутов
     const addOneValueCounter = () => {
         if (valueCounter < maxValue) {
             setValueCounter(valueCounter + 1);
@@ -52,6 +52,9 @@ function App() {
             return "Введите значения и нажмите SET"
         }
         if(isNaN(valueCounter)) {
+            return "Введите корректное значение"
+        }
+        if(maxValueError || startValueError) {
             return "Введите корректное значение"
         }
         return valueCounter
