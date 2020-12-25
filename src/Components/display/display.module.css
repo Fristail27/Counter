@@ -1,21 +1,24 @@
 .red {
     color: red;
 }
+@media (min-width:911px){
+    .AppRight{width: 460px;}
+}
 .AppRight {
     background-color: #282c34;
-    height: 500px;
-    width: 500px;
+    height: 460px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border: 5px #0592cd solid;
     border-radius: 20px;
+    text-align: center;
 }
 
 .display {
     height: 200px;
-    width: 380px;
+    width: 90%;
     border: 3px #0592cd solid;
     border-radius: 20px;
     font-size: 50px;
@@ -25,10 +28,19 @@
     flex-direction: column;
     justify-content: space-around;
 }
+@media (max-width:1350px){
+    .display{font-size:40px;}
+}
+@media (max-width:915px){
+    .display{font-size:30px;}
+}
+@media (max-width:600px){
+    .display{font-size:20px;}
+}
 .buttons {
-    height: 90px;
-    width: 380px;
     border: 3px #0592cd solid;
     border-radius: 20px;
-    padding-top: 30px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 90%;
 }

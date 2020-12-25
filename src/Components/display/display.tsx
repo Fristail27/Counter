@@ -4,16 +4,17 @@ import Button from "../button/button";
 
 type DisplayType = {
     maxValue: number
+    startValue: number
+    valueCounter: number
     value: number | "Введите значения и нажмите SET" | "Введите корректное значение"
-    nameForResetBtn: string
-    nameForAddBtn: string
-    disabledStatusForAddBtn: boolean
-    disabledStatusResetBtn: boolean
-    actionOnClickForAddBtn: () => void
-    actionOnClickForResetBtn: () => void
+    OnClickForAddBtn: () => void
+    OnClickForResetBtn: () => void
 }
 
 const Display = (props :DisplayType) => {
+    const addButtonStatus = props.valueCounter >= props.maxValue; // дисейбл для кнопки адд
+    const resetButtonStatus = props.valueCounter <= props.startValue; // дисейбл для кн ресет
+
     let red = "";
     if (props.value === props.maxValue) {
         red = s.red
@@ -26,8 +27,8 @@ const Display = (props :DisplayType) => {
                 </div>
             </div>
             <div className={s.buttons}>
-                <Button name={props.nameForAddBtn} disabledStatus={props.disabledStatusForAddBtn} actionOnClick={props.actionOnClickForAddBtn}/>
-                <Button name={props.nameForResetBtn} disabledStatus={props.disabledStatusResetBtn} actionOnClick={props.actionOnClickForResetBtn}/>
+                <Button name="Add" disabledStatus={addButtonStatus} actionOnClick={props.OnClickForAddBtn}/>
+                <Button name="Reset" disabledStatus={resetButtonStatus} actionOnClick={props.OnClickForResetBtn}/>
             </div>
         </div>
     )
