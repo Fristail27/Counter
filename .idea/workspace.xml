@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="rev.2.05 add materialUI">
-      <change afterPath="$PROJECT_DIR$/src/Components/Input/CustomizedInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Menu/menu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Error404.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/OneDisplay.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/InitialState.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Input/Input.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Input/Input.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/display/display.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/display/display.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Input/CustomizedInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Input/CustomizedInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Menu/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Menu/menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/button/button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/button/button.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/button/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/button/button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/display/display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/display/display.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -51,6 +52,8 @@
       <recent name="D:\web\2020\counter\src\Components\displayWithInputs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web\2020\counter\src\Components\Common" />
+      <recent name="D:\web\2020\counter\src\Components\Pages" />
       <recent name="D:\web\2020\counter\src\Components\Input" />
       <recent name="D:\web\2020\counter\src\Components" />
       <recent name="D:\web\2020\counter\src\Menu" />
@@ -71,7 +74,8 @@
       <workItem from="1608658741251" duration="4284000" />
       <workItem from="1608663231413" duration="32000" />
       <workItem from="1608834963614" duration="6995000" />
-      <workItem from="1608916227874" duration="9238000" />
+      <workItem from="1608916227874" duration="9328000" />
+      <workItem from="1608995590930" duration="3791000" />
     </task>
     <task id="LOCAL-00001" summary="rev.2.01">
       <created>1608578933346</created>
@@ -94,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608580744566</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="rev.2.05 add materialUI">
+      <created>1608925544841</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608925544841</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +122,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="counter" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>

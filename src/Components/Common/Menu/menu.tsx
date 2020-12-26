@@ -3,14 +3,17 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {Menu as MenuIcon} from "@material-ui/icons";
 import {IconButton} from "@material-ui/core";
+import { NavLink } from 'react-router-dom';
 
 export default function SimpleMenu() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
     };
+    const linkToTwoDisplays = () => {
+        setAnchorEl(null);
 
+    };
     const handleClose = () => {
         setAnchorEl(null);
     };
@@ -27,9 +30,8 @@ export default function SimpleMenu() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem component={NavLink} to="/TwoDisplays" onClick={linkToTwoDisplays}>Two Displays</MenuItem>
+                <MenuItem component={NavLink} to="/OneDisplay" onClick={handleClose}>One Display</MenuItem>
             </Menu>
         </div>
     );

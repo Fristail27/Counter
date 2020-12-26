@@ -1,18 +1,12 @@
 import React, {useState} from 'react';
+import {HashRouter, Redirect, Route, Switch} from 'react-router-dom';
+import {AppBar, Toolbar, Typography} from "@material-ui/core";
+import SimpleMenu from "./Components/Common/Menu/menu";
 import './App.css';
-import Display from "./Components/display/display";
-import DisplayWithInputs from "./Components/displayWithInputs/DisplayWithInputs";
-import {AppBar, Grid, Toolbar, Typography} from "@material-ui/core";
-import SimpleMenu from "./Components/Menu/menu";
+import initialState from "./utils/InitialState";
+import Error404 from "./Components/Pages/Error404";
+import TwoDisplays from "./Components/Pages/TwoDisplays/TwoDisplays";
 
-const initialState = (keyValue: string, defaultValue: number) => {
-    const fromLocStor = JSON.parse(localStorage.getItem("localStorageValues") || "{}")
-    if (fromLocStor[keyValue]) {
-        return Number.parseInt(fromLocStor[keyValue])
-    } else {
-        return defaultValue
-    }
-}; //фяк принимает строку с названием ключа объекта и возвращает либо значение из локалСторедж, или если его нет то 0/
 
 function App() {
     let [valueCounter, setValueCounter] = useState<number>(0); //usestate для значения счетчика
@@ -65,37 +59,34 @@ function App() {
 
     return (
         <div className="App">
-            <AppBar position="static">
-                <Toolbar>
-                    <SimpleMenu/>
-                    <Typography variant="h6">
-                        Counter
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-            <Grid style={{height: "90vh"}} container={true} direction="row" alignItems="center" justify="space-evenly">
-                <Grid item>
-                <DisplayWithInputs
-                    startValue={startValue}
-                    maxValue={maxValue}
-                    maxValueError={maxValueError}
-                    startValueError={startValueError}
-                    disabledStatusForSetBtn={setButtonDisableStatus || buttonSetDisableStatus}
-                    actionOnClickForSetBtn={onClickSetButton}
-                    onChangeForMaxValue={onChangeForMaxValue}
-                    onChangeForStartValue={onChangeForStartValue}
-                />
-                </Grid>
-                <Grid item>
-                <Display maxValue={maxValue}
-                         startValue={startValue}
-                         valueCounter={valueCounter}
-                         value={displayValue(valueCounter)}
-                         OnClickForAddBtn={addOneValueCounter}
-                         OnClickForResetBtn={resetValueCounter}/>
-                </Grid>
-            </Grid>
-
+            <HashRouter>
+                <AppBar position="static">
+                    <Toolbar>
+                        <SimpleMenu/>
+                        <Typography variant="h6">
+                            Counter
+                        </Typography>
+                    </Toolbar>
+                </AppBar>
+                <Switch>
+                    <Route path={"/"} exact render={() => <Redirect to={"/TwoDisplays"}/>}/>
+                    <Route path={"/TwoDisplays"} render={() => <TwoDisplays
+                        startValue={startValue}
+                        maxValue={maxValue}
+                        maxValueError={maxValueError}
+                        startValueError={startValueError}
+                        disabledStatusForSetBtn={setButtonDisableStatus || buttonSetDisableStatus}
+                        actionOnClickForSetBtn={onClickSetButton}
+                        onChangeForMaxValue={onChangeForMaxValue}
+                        onChangeForStartValue={onChangeForStartValue}
+                        valueCounter={valueCounter}
+                        value={displayValue(valueCounter)}
+                        OnClickForAddBtn={addOneValueCounter}
+                        OnClickForResetBtn={resetValueCounter}/>}/>
+                    <Route path={"/OneDisplay"} render={() => <Error404/>}/>
+                    <Route render={() => <Error404/>}/>
+                </Switch>
+            </HashRouter>
         </div>
     );
 }

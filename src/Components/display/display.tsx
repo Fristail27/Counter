@@ -1,15 +1,8 @@
 import React from "react";
 import s from "./display.module.css"
-import Button from "../button/button";
+import Button from "../Common/button/button";
+import {DisplayType} from "../Pages/TwoDisplays/TwoDisplays";
 
-type DisplayType = {
-    maxValue: number
-    startValue: number
-    valueCounter: number
-    value: number | "Введите значения и нажмите SET" | "Введите корректное значение"
-    OnClickForAddBtn: () => void
-    OnClickForResetBtn: () => void
-}
 
 const Display = (props :DisplayType) => {
     const addButtonStatus = props.valueCounter >= props.maxValue; // дисейбл для кнопки адд
