@@ -12,7 +12,7 @@ export type DisplayType = {
 }
 
 const Display = (props :DisplayType) => {
-    const addButtonStatus = props.valueCounter >= props.maxValue; // дисейбл для кнопки адд
+    const addButtonStatus = props.valueCounter >= props.maxValue || props.value === "Введите значения и нажмите SET"; // дисейбл для кнопки адд
     const resetButtonStatus = props.valueCounter <= props.startValue; // дисейбл для кн ресет
 
     let red = "";

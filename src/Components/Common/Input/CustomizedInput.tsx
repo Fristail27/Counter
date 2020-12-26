@@ -34,7 +34,7 @@ const theme = createMuiTheme({
 export default function CustomizedInputs(props:any) {
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        const valueToNumber = Number.parseInt(e.currentTarget.value);//приводим value инпута к числу, т.к. возвращает строку
+        const valueToNumber = Number.parseInt(e.currentTarget.value) || 0;//приводим value инпута к числу, т.к. возвращает строку
         props.onChange(valueToNumber)
     }
     const classes = useStyles();
