@@ -1,35 +1,13 @@
 import {Grid} from "@material-ui/core";
-import DisplayWithInputs from "../../displayWithInputs/DisplayWithInputs";
-import Display from "../../display/display";
+import DisplayWithInputs, {DisplayWithInputsType} from "../../displayWithInputs/DisplayWithInputs";
+import Display, {DisplayType} from "../../display/display";
 import React from "react";
 
-export type DisplayWithInputsType = {
-    maxValue:number
-    startValue:number
-    maxValueError:boolean
-    startValueError:boolean
-    disabledStatusForSetBtn: boolean
-    actionOnClickForSetBtn: () => void
-    onChangeForMaxValue: (i: number) => void
-    onChangeForStartValue: (i: number) => void
-}
-
-export type DisplayType = {
-    maxValue: number
-    startValue: number
-    valueCounter: number
-    value: number | "Введите значения и нажмите SET" | "Введите корректное значение"
-    OnClickForAddBtn: () => void
-    OnClickForResetBtn: () => void
-}
 
 type TwoDisplaysType = DisplayType & DisplayWithInputsType
 
-
-
-const TwoDisplays = (props:TwoDisplaysType) => {
+const TwoDisplays = (props: TwoDisplaysType) => {
     return (
-
         <Grid style={{height: "90vh"}} container={true} direction="row" alignItems="center" justify="space-evenly">
             <Grid item>
                 <DisplayWithInputs

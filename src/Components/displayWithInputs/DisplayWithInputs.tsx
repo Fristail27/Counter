@@ -2,8 +2,17 @@ import React from "react";
 import s from "./DisplayWithInputs.module.css"
 import Button from "../Common/button/button";
 import CustomizedInputs from "../Common/Input/CustomizedInput";
-import {DisplayWithInputsType} from "../Pages/TwoDisplays/TwoDisplays";
 
+export type DisplayWithInputsType = {
+    maxValue:number
+    startValue:number
+    maxValueError:boolean
+    startValueError:boolean
+    disabledStatusForSetBtn: boolean
+    actionOnClickForSetBtn: (bool?:boolean) => void
+    onChangeForMaxValue: (i: number) => void
+    onChangeForStartValue: (i: number) => void
+}
 
 const DisplayWithInputs = (props :DisplayWithInputsType) => {
     return (

@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="rev.2.05 add materialUI">
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Error404.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/OneDisplay.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/InitialState.ts" afterDir="false" />
+    <list default="true" id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="rev.2.10 refactoring, add files">
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Input/CustomizedInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Input/CustomizedInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Menu/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Menu/menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/button/button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/button/button.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/button/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/button/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Common/Menu/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Menu/menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/OneDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/display/display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/display/display.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +47,11 @@
       <recent name="D:\web\2020\counter\src\Components\displayWithInputs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web\2020\counter\src\Components\Pages\OneDisplay" />
       <recent name="D:\web\2020\counter\src\Components\Common" />
       <recent name="D:\web\2020\counter\src\Components\Pages" />
       <recent name="D:\web\2020\counter\src\Components\Input" />
       <recent name="D:\web\2020\counter\src\Components" />
-      <recent name="D:\web\2020\counter\src\Menu" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -75,7 +70,7 @@
       <workItem from="1608663231413" duration="32000" />
       <workItem from="1608834963614" duration="6995000" />
       <workItem from="1608916227874" duration="9328000" />
-      <workItem from="1608995590930" duration="3791000" />
+      <workItem from="1608995590930" duration="20691000" />
     </task>
     <task id="LOCAL-00001" summary="rev.2.01">
       <created>1608578933346</created>
@@ -105,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608925544841</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="rev.2.10 refactoring, add files">
+      <created>1609000444717</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609000444717</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +124,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="counter" />
                       </list>
                     </value>
                   </entry>
@@ -141,6 +143,7 @@
     <MESSAGE value="rev.2.02" />
     <MESSAGE value="rev.2.03" />
     <MESSAGE value="rev.2.05 add materialUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="rev.2.05 add materialUI" />
+    <MESSAGE value="rev.2.10 refactoring, add files" />
+    <option name="LAST_COMMIT_MESSAGE" value="rev.2.10 refactoring, add files" />
   </component>
 </project>

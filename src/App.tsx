@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import {HashRouter, Redirect, Route, Switch} from 'react-router-dom';
-import {AppBar, Toolbar, Typography} from "@material-ui/core";
+import {AppBar, Grid, Toolbar, Typography} from "@material-ui/core";
 import SimpleMenu from "./Components/Common/Menu/menu";
 import './App.css';
 import initialState from "./utils/InitialState";
 import Error404 from "./Components/Pages/Error404";
 import TwoDisplays from "./Components/Pages/TwoDisplays/TwoDisplays";
+import OneDisplay from "./Components/Pages/OneDisplay/OneDisplay";
 
 
 function App() {
@@ -34,6 +35,18 @@ function App() {
 
         localStorage.setItem("localStorageValues", JSON.stringify(locStora))
     }; // обработчик нажатия на set
+    const onClickSetForOneDisplay = (stat?:boolean) => {
+        if(stat) {
+            setValueCounter(startValue);
+            const locStora = {
+                maxValue: String(maxValue),
+                startValue: String(startValue),
+            } // объект со старт. макс. и текущим значением
+            localStorage.setItem("localStorageValues", JSON.stringify(locStora))
+        } else {
+
+        }
+    }
     const onChangeForMaxValue = (i: number) => {
         setMaxValue(i)
         setButtonSetDisableStatus(false) // возвращаем активность кнопки сет
@@ -56,6 +69,7 @@ function App() {
     } // фция возвращает или значение счетчика или текст ошибки
     // в пропс кнопки сета передаю отдельно два условия для дизейбла: setButtonDisableStatus реагирует на изменения инпутов и блокирует кнопку при запрещенных условиях, разблокирует если запрещенные условия выполняются, а buttonSetDisableStatus берется из юсстейта и блокирует кнопку при первом нажатии, а разблокирует при изменении инпутов
     // надо их как то объединитьs
+
 
     return (
         <div className="App">
@@ -83,7 +97,19 @@ function App() {
                         value={displayValue(valueCounter)}
                         OnClickForAddBtn={addOneValueCounter}
                         OnClickForResetBtn={resetValueCounter}/>}/>
-                    <Route path={"/OneDisplay"} render={() => <Error404/>}/>
+                    <Route path={"/OneDisplay"} render={() => <OneDisplay
+                        startValue={startValue}
+                        maxValue={maxValue}
+                        maxValueError={maxValueError}
+                        startValueError={startValueError}
+                        disabledStatusForSetBtn={setButtonDisableStatus}
+                        actionOnClickForSetBtn={onClickSetForOneDisplay}
+                        onChangeForMaxValue={onChangeForMaxValue}
+                        onChangeForStartValue={onChangeForStartValue}
+                        valueCounter={valueCounter}
+                        value={displayValue(valueCounter)}
+                        OnClickForAddBtn={addOneValueCounter}
+                        OnClickForResetBtn={resetValueCounter}/>}/>
                     <Route render={() => <Error404/>}/>
                 </Switch>
             </HashRouter>

@@ -5,7 +5,7 @@ import {Menu as MenuIcon} from "@material-ui/icons";
 import {IconButton} from "@material-ui/core";
 import { NavLink } from 'react-router-dom';
 
-export default function SimpleMenu() {
+const SimpleMenu = () => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
@@ -36,3 +36,5 @@ export default function SimpleMenu() {
         </div>
     );
 }
+
+export default SimpleMenu
