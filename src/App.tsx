@@ -1,62 +1,48 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {HashRouter, Redirect, Route, Switch} from 'react-router-dom';
 import {AppBar, Toolbar, Typography} from "@material-ui/core";
 import SimpleMenu from "./Components/Common/Menu/menu";
 import './App.css';
-import initialState from "./utils/InitialState";
 import Error404 from "./Components/Pages/Error404";
 import TwoDisplays from "./Components/Pages/TwoDisplays/TwoDisplays";
 import OneDisplay from "./Components/Pages/OneDisplay/OneDisplay";
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStateType} from "./state/Store";
+import {
+    changeMaxValueAC,
+    changeStartValueAC, clickSetButtonAC,
+    increaseByOneAC,
+    InitialStateType,
+    resetCurrentValueAC
+} from "./state/Counter-reducer";
 
 
 function App() {
-    let [valueCounter, setValueCounter] = useState<number>(0); //usestate для значения счетчика
-    let [maxValue, setMaxValue] = useState<number>(initialState("maxValue", 0))  // usestate для максимального значения
-    let [startValue, setStartValue] = useState<number>(initialState("startValue", 0))  // usestate для стартового значения
-    let [buttonSetDisableStatus, setButtonSetDisableStatus] = useState<boolean>(false) // // usestate для отображения кнопки сет
-    const maxValueError = (maxValue <= startValue) || (maxValue < 0) // условие для ошибки для поля с макс значением
-    const startValueError = (maxValue <= startValue) || (startValue < 0) // условие для ошибки для поля со стартовым значением
-    const setButtonDisableStatus = (maxValue < startValue) || (maxValue < 0) || (startValue < 0) || maxValue === startValue// условия при которых кнопка сет должна гаснуть, если какое то сработает то возвращают false, вставляется в пропсы кнопки сет и перерисовывает при каждом изменении инпутов
+    const values = useSelector<AppRootStateType, InitialStateType> (state => state.values)
+    const dispatch = useDispatch()
+
+
+    const maxValueError = (values.maxValue <= values.startValue) || (values.maxValue < 0) // условие для ошибки для поля с макс значением
+    const startValueError = (values.maxValue <= values.startValue) || (values.startValue < 0) // условие для ошибки для поля со стартовым значением
+    const setButtonDisableStatus = (values.maxValue < values.startValue) || (values.maxValue < 0) || (values.startValue < 0) || values.maxValue === values.startValue// условия при которых кнопка сет должна гаснуть, если какое то сработает то возвращают false, вставляется в пропсы кнопки сет и перерисовывает при каждом изменении инпутов
     const addOneValueCounter = () => {
-        if (valueCounter < maxValue) {
-            setValueCounter(valueCounter + 1);
-        }
+        dispatch(increaseByOneAC())
     }; // обработчик кнопки адд
     const resetValueCounter = () => {
-        setValueCounter(startValue)
+        dispatch(resetCurrentValueAC())
     }; // обработчик ресета
-    const onClickSetButton = () => {
-        setValueCounter(startValue); // устанавливаем значение в дисплей
-        setButtonSetDisableStatus(true) // делаем кнопку после нажатия неактивной, потом активность возвращаем при изменении инпутов
-        const locStora = {
-            maxValue: String(maxValue),
-            startValue: String(startValue),
-        } // объект со старт. макс. и текущим значением
-
-        localStorage.setItem("localStorageValues", JSON.stringify(locStora))
-    }; // обработчик нажатия на set
-    const onClickSetForOneDisplay = (stat?:boolean) => {
-        if(stat) {
-            setValueCounter(startValue);
-            const locStora = {
-                maxValue: String(maxValue),
-                startValue: String(startValue),
-            } // объект со старт. макс. и текущим значением
-            localStorage.setItem("localStorageValues", JSON.stringify(locStora))
-        } else {
-
-        }
-    }
     const onChangeForMaxValue = (i: number) => {
-        setMaxValue(i)
-        setButtonSetDisableStatus(false) // возвращаем активность кнопки сет
+        dispatch(changeMaxValueAC(i))
     }; //обработчик изменения макс инпута
     const onChangeForStartValue = (i: number) => {
-        setStartValue(i)
-        setButtonSetDisableStatus(false) // возвращаем активность кнопки сет
+        dispatch(changeStartValueAC(i))
     }; // обработчик изменения старт инпута
+    const onClickSetButtonHandler = () => {
+        dispatch(clickSetButtonAC())
+    } //обработчик нажатия на SET
+
     const displayValue = (valueCounter: number) => {
-        if (!buttonSetDisableStatus) {
+        if (!values.setButtonDisableStatus) {
             return "Введите значения и нажмите SET"
         }
         if (isNaN(valueCounter)) {
@@ -68,7 +54,7 @@ function App() {
         return valueCounter
     } // фция возвращает или значение счетчика или текст ошибки
     // в пропс кнопки сета передаю отдельно два условия для дизейбла: setButtonDisableStatus реагирует на изменения инпутов и блокирует кнопку при запрещенных условиях, разблокирует если запрещенные условия выполняются, а buttonSetDisableStatus берется из юсстейта и блокирует кнопку при первом нажатии, а разблокирует при изменении инпутов
-    // надо их как то объединитьs
+    // надо их как то объединить
 
 
     return (
@@ -85,29 +71,31 @@ function App() {
                 <Switch>
                     <Route path={"/"} exact render={() => <Redirect to={"/TwoDisplays"}/>}/>
                     <Route path={"/TwoDisplays"} render={() => <TwoDisplays
-                        startValue={startValue}
-                        maxValue={maxValue}
+                        startValue={values.startValue}
+                        maxValue={values.maxValue}
+                        valueCounter={values.currentValue}
+                        value={displayValue(values.currentValue)}
                         maxValueError={maxValueError}
                         startValueError={startValueError}
-                        disabledStatusForSetBtn={setButtonDisableStatus || buttonSetDisableStatus}
-                        actionOnClickForSetBtn={onClickSetButton}
+                        disabledStatusForSetBtn={setButtonDisableStatus || values.setButtonDisableStatus}
+                        actionOnClickForSetBtn={onClickSetButtonHandler}
                         onChangeForMaxValue={onChangeForMaxValue}
                         onChangeForStartValue={onChangeForStartValue}
-                        valueCounter={valueCounter}
-                        value={displayValue(valueCounter)}
                         OnClickForAddBtn={addOneValueCounter}
                         OnClickForResetBtn={resetValueCounter}/>}/>
                     <Route path={"/OneDisplay"} render={() => <OneDisplay
-                        startValue={startValue}
-                        maxValue={maxValue}
+                        startValue={values.startValue}
+                        maxValue={values.maxValue}
+                        valueCounter={values.currentValue}
+                        value={displayValue(values.currentValue)}
+                        displayStatus={values.displayStatusForOneDisplay}
                         maxValueError={maxValueError}
                         startValueError={startValueError}
                         disabledStatusForSetBtn={setButtonDisableStatus}
-                        actionOnClickForSetBtn={onClickSetForOneDisplay}
+                        onClickSet={onClickSetButtonHandler}
+                        actionOnClickForSetBtn={onClickSetButtonHandler}
                         onChangeForMaxValue={onChangeForMaxValue}
                         onChangeForStartValue={onChangeForStartValue}
-                        valueCounter={valueCounter}
-                        value={displayValue(valueCounter)}
                         OnClickForAddBtn={addOneValueCounter}
                         OnClickForResetBtn={resetValueCounter}/>}/>
                     <Route render={() => <Error404/>}/>

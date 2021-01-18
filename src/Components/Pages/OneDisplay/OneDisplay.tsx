@@ -1,15 +1,22 @@
-import React, {useState} from "react";
+import React from "react";
 import {Button, ButtonGroup, Grid} from "@material-ui/core";
 import CustomizedInputs from "../../Common/Input/CustomizedInput";
 import {makeStyles} from "@material-ui/core/styles";
 import {DisplayType} from "../../display/display";
 import {DisplayWithInputsType} from "../../displayWithInputs/DisplayWithInputs";
 
-type OneDisplaysType = DisplayType & DisplayWithInputsType
+type OneDisplaysType = DisplayType & DisplayWithInputsType & {
+    displayStatus:boolean
+    onClickSet: ()=>void
+}
 
 
 const OneDisplay = (props: OneDisplaysType) => {
-    const [displayStatus, setDisplayStatus] = useState<boolean>(true)
+
+    const setDisableStatus = props.disabledStatusForSetBtn || props.maxValue===props.startValue || Number.isNaN(props.startValue) || Number.isNaN(props.maxValue)
+    const addButtonStatus = props.valueCounter >= props.maxValue || props.displayStatus; // дисейбл для кнопки адд
+    const resetButtonStatus = props.valueCounter <= props.startValue || props.displayStatus; // дисейбл для кн ресет
+
     const useStyles = makeStyles({
         main: {
             minHeight: "90vh",
@@ -39,13 +46,6 @@ const OneDisplay = (props: OneDisplaysType) => {
             margin: 20,
         },
     });
-    const onClickSet = () => {
-        props.actionOnClickForSetBtn(displayStatus)
-        setDisplayStatus(!displayStatus)
-    };
-    const setDisableStatus = props.disabledStatusForSetBtn || props.maxValue===props.startValue || Number.isNaN(props.startValue) || Number.isNaN(props.maxValue)
-    const addButtonStatus = props.valueCounter >= props.maxValue || displayStatus; // дисейбл для кнопки адд
-    const resetButtonStatus = props.valueCounter <= props.startValue || displayStatus; // дисейбл для кн ресет
     const classes = useStyles();
 
     return (
@@ -53,7 +53,7 @@ const OneDisplay = (props: OneDisplaysType) => {
             <Grid container direction="row" justify="center" alignItems="center">
                 <Grid classes={{root: classes.forContainer,}} item xs={12} sm={5}>
                     <Grid container direction="column" justify="center" alignItems="center">
-                        { displayStatus
+                        { props.displayStatus
                             ? <Grid classes={{root: classes.forInputs,}} item xs={11} sm={8}>
                              <div><Grid item><CustomizedInputs errorStatus={props.maxValueError}
                                                                     onChange={props.onChangeForMaxValue}
@@ -71,7 +71,7 @@ const OneDisplay = (props: OneDisplaysType) => {
                             <ButtonGroup variant="contained" color="primary"
                                          aria-label="contained primary button group">
                                 <Button disabled={setDisableStatus}
-                                        onClick={onClickSet}>Set</Button>
+                                        onClick={props.onClickSet}>Set</Button>
                                 <Button disabled={addButtonStatus} onClick={props.OnClickForAddBtn}>Add</Button>
                                 <Button disabled={resetButtonStatus} onClick={props.OnClickForResetBtn}>Reset</Button>
                             </ButtonGroup>

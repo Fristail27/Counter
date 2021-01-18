@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="rev.2.13 fix bags">
+    <list default="true" id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="rev.2.14 fix bags">
+      <change afterPath="$PROJECT_DIR$/src/state/Counter-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/Store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/display/display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/display/display.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/InitialState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/InitialStateforValue.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="counter" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lycQwJMyPLDNbH72PIBQMnzquK" />
@@ -64,7 +83,10 @@
       <workItem from="1608834963614" duration="6995000" />
       <workItem from="1608916227874" duration="9328000" />
       <workItem from="1608995590930" duration="21910000" />
-      <workItem from="1609018634969" duration="115000" />
+      <workItem from="1609018634969" duration="334000" />
+      <workItem from="1609054268800" duration="380000" />
+      <workItem from="1609061769121" duration="55000" />
+      <workItem from="1610989913779" duration="8007000" />
     </task>
     <task id="LOCAL-00001" summary="rev.2.01">
       <created>1608578933346</created>
@@ -122,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609018422120</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="rev.2.14 fix bags">
+      <created>1609018816414</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609018816414</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +168,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="counter" />
+                        <option value="counter-redux" />
                       </list>
                     </value>
                   </entry>
@@ -162,6 +191,7 @@
     <MESSAGE value="rev.2.11 add OneDisplay Counter" />
     <MESSAGE value="rev.2.12 fix bags" />
     <MESSAGE value="rev.2.13 fix bags" />
-    <option name="LAST_COMMIT_MESSAGE" value="rev.2.13 fix bags" />
+    <MESSAGE value="rev.2.14 fix bags" />
+    <option name="LAST_COMMIT_MESSAGE" value="rev.2.14 fix bags" />
   </component>
 </project>
