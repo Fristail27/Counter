@@ -21,7 +21,6 @@ function App() {
     const values = useSelector<AppRootStateType, InitialStateType> (state => state.values)
     const dispatch = useDispatch()
 
-
     const maxValueError = (values.maxValue <= values.startValue) || (values.maxValue < 0) // условие для ошибки для поля с макс значением
     const startValueError = (values.maxValue <= values.startValue) || (values.startValue < 0) // условие для ошибки для поля со стартовым значением
     const setButtonDisableStatus = (values.maxValue < values.startValue) || (values.maxValue < 0) || (values.startValue < 0) || values.maxValue === values.startValue// условия при которых кнопка сет должна гаснуть, если какое то сработает то возвращают false, вставляется в пропсы кнопки сет и перерисовывает при каждом изменении инпутов
@@ -78,7 +77,7 @@ function App() {
                         maxValueError={maxValueError}
                         startValueError={startValueError}
                         disabledStatusForSetBtn={setButtonDisableStatus || values.setButtonDisableStatus}
-                        actionOnClickForSetBtn={onClickSetButtonHandler}
+                        onClickSet={onClickSetButtonHandler}
                         onChangeForMaxValue={onChangeForMaxValue}
                         onChangeForStartValue={onChangeForStartValue}
                         OnClickForAddBtn={addOneValueCounter}
@@ -93,7 +92,6 @@ function App() {
                         startValueError={startValueError}
                         disabledStatusForSetBtn={setButtonDisableStatus}
                         onClickSet={onClickSetButtonHandler}
-                        actionOnClickForSetBtn={onClickSetButtonHandler}
                         onChangeForMaxValue={onChangeForMaxValue}
                         onChangeForStartValue={onChangeForStartValue}
                         OnClickForAddBtn={addOneValueCounter}

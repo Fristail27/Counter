@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="rev.2.14 fix bags">
-      <change afterPath="$PROJECT_DIR$/src/state/Counter-reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/Store.ts" afterDir="false" />
+    <list default="true" id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="use Redux for counter">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/InitialState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/InitialStateforValue.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +81,7 @@
       <workItem from="1609018634969" duration="334000" />
       <workItem from="1609054268800" duration="380000" />
       <workItem from="1609061769121" duration="55000" />
-      <workItem from="1610989913779" duration="8007000" />
+      <workItem from="1610989913779" duration="9273000" />
     </task>
     <task id="LOCAL-00001" summary="rev.2.01">
       <created>1608578933346</created>
@@ -151,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609018816414</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="use Redux for counter">
+      <created>1610998230614</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1610998230614</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +194,7 @@
     <MESSAGE value="rev.2.12 fix bags" />
     <MESSAGE value="rev.2.13 fix bags" />
     <MESSAGE value="rev.2.14 fix bags" />
-    <option name="LAST_COMMIT_MESSAGE" value="rev.2.14 fix bags" />
+    <MESSAGE value="use Redux for counter" />
+    <option name="LAST_COMMIT_MESSAGE" value="use Redux for counter" />
   </component>
 </project>

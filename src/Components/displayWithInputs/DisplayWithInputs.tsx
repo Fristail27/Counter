@@ -9,7 +9,7 @@ export type DisplayWithInputsType = {
     maxValueError:boolean
     startValueError:boolean
     disabledStatusForSetBtn: boolean
-    actionOnClickForSetBtn: (bool?:boolean) => void
+    onClickSet: () => void
     onChangeForMaxValue: (i: number) => void
     onChangeForStartValue: (i: number) => void
 }
@@ -24,7 +24,7 @@ const DisplayWithInputs = (props :DisplayWithInputsType) => {
                                   textValue="Start value:"/>
             </div>
             <div className={s.buttons}>
-                <Button name="Set" disabledStatus={props.disabledStatusForSetBtn} actionOnClick={props.actionOnClickForSetBtn}/>
+                <Button name="Set" disabledStatus={props.disabledStatusForSetBtn} actionOnClick={props.onClickSet}/>
             </div>
         </div>
     )

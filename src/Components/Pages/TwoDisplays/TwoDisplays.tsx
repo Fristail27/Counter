@@ -16,7 +16,7 @@ const TwoDisplays = (props: TwoDisplaysType) => {
                     maxValueError={props.maxValueError}
                     startValueError={props.startValueError}
                     disabledStatusForSetBtn={props.disabledStatusForSetBtn}
-                    actionOnClickForSetBtn={props.actionOnClickForSetBtn}
+                    onClickSet={props.onClickSet}
                     onChangeForMaxValue={props.onChangeForMaxValue}
                     onChangeForStartValue={props.onChangeForStartValue}
                 />
