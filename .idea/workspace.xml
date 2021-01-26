@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="use Redux for counter">
+    <list default="true" id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="use Redux for counter 1.03">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/display/display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/display/display.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610998230614</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="use Redux for counter 1.03">
+      <created>1611692368869</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611692368869</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +200,7 @@
     <MESSAGE value="rev.2.13 fix bags" />
     <MESSAGE value="rev.2.14 fix bags" />
     <MESSAGE value="use Redux for counter" />
-    <option name="LAST_COMMIT_MESSAGE" value="use Redux for counter" />
+    <MESSAGE value="use Redux for counter 1.03" />
+    <option name="LAST_COMMIT_MESSAGE" value="use Redux for counter 1.03" />
   </component>
 </project>

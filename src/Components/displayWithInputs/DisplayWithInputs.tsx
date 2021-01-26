@@ -32,7 +32,7 @@ const DisplayWithInputs = () => {
                                   textValue="Start value:"/>
             </div>
             <div className={s.buttons}>
-                <Button name="Set" disabledStatus={setButtonDisableStatus} actionOnClick={()=> dispatch(clickSetButtonAC())}/>
+                <Button name="Set" disabledStatus={setButtonDisableStatus || values.setButtonDisableStatus} actionOnClick={()=> dispatch(clickSetButtonAC())}/>
             </div>
         </div>
     )
