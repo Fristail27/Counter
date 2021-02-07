@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="use Redux for counter 1.03">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+    <list default="true" id="c07f0aa6-57e1-4e52-97a4-1e93f5fb53f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Common/Input/CustomizedInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Input/CustomizedInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Common/Menu/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Menu/menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Common/button/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/button/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Error404.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Error404.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/display/display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/display/display.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/Counter-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/Counter-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/Store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/Store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/InitialStateforValue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/InitialStateforValue.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="TypeScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="counter" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1lycQwJMyPLDNbH72PIBQMnzquK" />
+  <component name="ProjectId" id="1o9r0TLwebIEN6j9O8xjyfEZbce" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,7 +50,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,122 +57,24 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
     <property name="ts.external.directory.path" value="D:\web\2020\counter\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\web\2020\counter\src\Components\displayWithInputs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\web\2020\counter\src\Components\Pages\OneDisplay" />
-      <recent name="D:\web\2020\counter\src\Components\Common" />
-      <recent name="D:\web\2020\counter\src\Components\Pages" />
-      <recent name="D:\web\2020\counter\src\Components\Input" />
-      <recent name="D:\web\2020\counter\src\Components" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5e0f1620-b9c7-41bc-9b45-b60aae64cd52" name="Default Changelist" comment="" />
-      <created>1608572758895</created>
+      <changelist id="c07f0aa6-57e1-4e52-97a4-1e93f5fb53f5" name="Default Changelist" comment="" />
+      <created>1612709426828</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1608572758895</updated>
-      <workItem from="1608572761311" duration="7017000" />
-      <workItem from="1608580275813" duration="510000" />
-      <workItem from="1608649207310" duration="59000" />
-      <workItem from="1608654444460" duration="697000" />
-      <workItem from="1608658741251" duration="4284000" />
-      <workItem from="1608663231413" duration="32000" />
-      <workItem from="1608834963614" duration="6995000" />
-      <workItem from="1608916227874" duration="9328000" />
-      <workItem from="1608995590930" duration="21910000" />
-      <workItem from="1609018634969" duration="334000" />
-      <workItem from="1609054268800" duration="380000" />
-      <workItem from="1609061769121" duration="55000" />
-      <workItem from="1610989913779" duration="9273000" />
+      <updated>1612709426828</updated>
+      <workItem from="1612709429407" duration="86000" />
+      <workItem from="1612709517006" duration="1393000" />
+      <workItem from="1612712014114" duration="1028000" />
+      <workItem from="1612719066578" duration="4214000" />
     </task>
-    <task id="LOCAL-00001" summary="rev.2.01">
-      <created>1608578933346</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1608578933346</updated>
-    </task>
-    <task id="LOCAL-00002" summary="rev.2.02">
-      <created>1608579702619</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1608579702619</updated>
-    </task>
-    <task id="LOCAL-00003" summary="rev.2.03">
-      <created>1608580744566</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1608580744566</updated>
-    </task>
-    <task id="LOCAL-00004" summary="rev.2.05 add materialUI">
-      <created>1608925544841</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1608925544841</updated>
-    </task>
-    <task id="LOCAL-00005" summary="rev.2.10 refactoring, add files">
-      <created>1609000444717</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1609000444717</updated>
-    </task>
-    <task id="LOCAL-00006" summary="rev.2.11 add OneDisplay Counter">
-      <created>1609017455595</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1609017455595</updated>
-    </task>
-    <task id="LOCAL-00007" summary="rev.2.12 fix bags">
-      <created>1609018330244</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1609018330244</updated>
-    </task>
-    <task id="LOCAL-00008" summary="rev.2.13 fix bags">
-      <created>1609018422120</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1609018422120</updated>
-    </task>
-    <task id="LOCAL-00009" summary="rev.2.14 fix bags">
-      <created>1609018816414</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1609018816414</updated>
-    </task>
-    <task id="LOCAL-00010" summary="use Redux for counter">
-      <created>1610998230614</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1610998230614</updated>
-    </task>
-    <task id="LOCAL-00011" summary="use Redux for counter 1.03">
-      <created>1611692368869</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1611692368869</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,20 +103,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="rev.2" />
-    <MESSAGE value="rev.2.01" />
-    <MESSAGE value="rev.2.02" />
-    <MESSAGE value="rev.2.03" />
-    <MESSAGE value="rev.2.05 add materialUI" />
-    <MESSAGE value="rev.2.10 refactoring, add files" />
-    <MESSAGE value="rev.2.11 add OneDisplay Counter" />
-    <MESSAGE value="rev.2.12 fix bags" />
-    <MESSAGE value="rev.2.13 fix bags" />
-    <MESSAGE value="rev.2.14 fix bags" />
-    <MESSAGE value="use Redux for counter" />
-    <MESSAGE value="use Redux for counter 1.03" />
-    <option name="LAST_COMMIT_MESSAGE" value="use Redux for counter 1.03" />
   </component>
 </project>
