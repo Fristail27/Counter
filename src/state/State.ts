@@ -1,6 +1,6 @@
 /* eslint-disable */
 import initialStateforValue from "../utils/InitialStateforValue";
-import {action, makeObservable, observable} from "mobx";
+import {makeAutoObservable} from "mobx";
 
 interface IState {
     currentValue: number
@@ -23,18 +23,7 @@ class State implements IState{
     displayStatusForOneDisplay: boolean = true
 
     constructor() {
-        makeObservable(this, {
-            currentValue: observable,
-            maxValue: observable,
-            startValue: observable,
-            setButtonDisableStatus: observable,
-            displayStatusForOneDisplay: observable,
-            increaseValue: action,
-            resetCurrentValue: action,
-            changeMaxValue: action,
-            changeStartValue: action,
-            clickSetButton: action,
-        })
+        makeAutoObservable(this)
     }
     increaseValue () {
         this.currentValue += 1
@@ -44,9 +33,11 @@ class State implements IState{
     }
     changeMaxValue (value:number) {
         this.maxValue = value
+        this.setButtonDisableStatus = false
     }
     changeStartValue (value:number) {
         this.startValue = value
+        this.setButtonDisableStatus = false
     }
     clickSetButton () {
         const objForLocalStorage = {

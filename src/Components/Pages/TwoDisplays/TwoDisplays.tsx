@@ -1,10 +1,11 @@
 import React from 'react';
+import { useObserver } from 'mobx-react';
 import { Grid } from '@material-ui/core';
 import DisplayWithInputs from '../../displayWithInputs/DisplayWithInputs';
 import Display from '../../display/display';
 /* eslint-disable react/jsx-boolean-value */
 const TwoDisplays: React.FC = () => {
-  return (
+  return useObserver(() => (
     <Grid
       container={true}
       style={{ height: '90vh' }}
@@ -19,7 +20,7 @@ const TwoDisplays: React.FC = () => {
         <Display />
       </Grid>
     </Grid>
-  );
+  ));
 };
 
 export default TwoDisplays;

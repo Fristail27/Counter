@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c07f0aa6-57e1-4e52-97a4-1e93f5fb53f5" name="Default Changelist" comment="mobX for oneDisplay">
+    <list default="true" id="c07f0aa6-57e1-4e52-97a4-1e93f5fb53f5" name="Default Changelist" comment="mobX for oneDisplay/fix">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/display/display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/display/display.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/Counter-reducer.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state/State.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/State.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/Store.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +61,7 @@
       <workItem from="1612712014114" duration="1028000" />
       <workItem from="1612719066578" duration="4354000" />
       <workItem from="1612810988771" duration="68000" />
-      <workItem from="1616187603838" duration="2094000" />
+      <workItem from="1616187603838" duration="3649000" />
     </task>
     <task id="LOCAL-00001" summary="refactor with esLint">
       <created>1612723414139</created>
@@ -71,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616189547683</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mobX for oneDisplay/fix">
+      <created>1616189749569</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616189749569</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +117,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor with esLint" />
     <MESSAGE value="mobX for oneDisplay" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobX for oneDisplay" />
+    <MESSAGE value="mobX for oneDisplay/fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="mobX for oneDisplay/fix" />
   </component>
 </project>

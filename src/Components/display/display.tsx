@@ -1,19 +1,11 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { observer } from 'mobx-react';
 import s from './display.module.css';
 import Button from '../Common/button/button';
-import { AppRootStateType } from '../../state/Store';
-import {
-  increaseByOneAC,
-  InitialStateType,
-  resetCurrentValueAC,
-} from '../../state/Counter-reducer';
+import { appState } from '../../state/State';
 
-const Display: React.FC = () => {
-  const values = useSelector<AppRootStateType, InitialStateType>(
-    (state) => state.values
-  );
-  const dispatch = useDispatch();
+const Display: React.FC = observer(() => {
+  const values = appState;
 
   const maxValueError =
     values.maxValue <= values.startValue || values.maxValue < 0; // условие для ошибки для поля с макс значением
@@ -58,16 +50,16 @@ const Display: React.FC = () => {
         <Button
           name="Add"
           disabledStatus={addButtonStatus}
-          actionOnClick={() => dispatch(increaseByOneAC())}
+          actionOnClick={() => appState.increaseValue()}
         />
         <Button
           name="Reset"
           disabledStatus={resetButtonStatus}
-          actionOnClick={() => dispatch(resetCurrentValueAC())}
+          actionOnClick={() => appState.resetCurrentValue()}
         />
       </div>
     </div>
   );
-};
+});
 
 export default Display;

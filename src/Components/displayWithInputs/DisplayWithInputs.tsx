@@ -1,28 +1,21 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { observer } from 'mobx-react';
 import s from './DisplayWithInputs.module.css';
 import Button from '../Common/button/button';
 import CustomizedInputs from '../Common/Input/CustomizedInput';
-import { AppRootStateType } from '../../state/Store';
-import {
-  changeMaxValueAC,
-  changeStartValueAC,
-  clickSetButtonAC,
-  InitialStateType,
-} from '../../state/Counter-reducer';
+import { appState } from '../../state/State';
 
-const DisplayWithInputs: React.FC = () => {
-  const values = useSelector<AppRootStateType, InitialStateType>(
-    (state) => state.values
-  );
-  const dispatch = useDispatch();
-
+const DisplayWithInputs: React.FC = observer(() => {
+  const values = appState;
   const onChangeForMaxValue = (i: number) => {
-    dispatch(changeMaxValueAC(i));
+    appState.changeMaxValue(i);
   }; // обработчик изменения макс инпута
   const onChangeForStartValue = (i: number) => {
-    dispatch(changeStartValueAC(i));
+    appState.changeStartValue(i);
   }; // обработчик изменения старт инпута
+  const onClickSetButtonHandler = () => {
+    appState.clickSetButton();
+  }; // обработчик нажатия на SET
 
   const maxValueError =
     values.maxValue <= values.startValue || values.maxValue < 0; // условие для ошибки для поля с макс значением
@@ -55,11 +48,11 @@ const DisplayWithInputs: React.FC = () => {
           disabledStatus={
             setButtonDisableStatus || values.setButtonDisableStatus
           }
-          actionOnClick={() => dispatch(clickSetButtonAC())}
+          actionOnClick={onClickSetButtonHandler}
         />
       </div>
     </div>
   );
-};
+});
 
 export default DisplayWithInputs;
