@@ -1,3 +1,4 @@
+/* eslint-disable */
 import initialStateforValue from "../utils/InitialStateforValue";
 import {action, makeObservable, observable} from "mobx";
 
@@ -45,7 +46,7 @@ class State implements IState{
         this.maxValue = value
     }
     changeStartValue (value:number) {
-        this.maxValue = value
+        this.startValue = value
     }
     clickSetButton () {
         const objForLocalStorage = {
