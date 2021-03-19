@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c07f0aa6-57e1-4e52-97a4-1e93f5fb53f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" />
+    <list default="true" id="c07f0aa6-57e1-4e52-97a4-1e93f5fb53f5" name="Default Changelist" comment="refactor with esLint">
+      <change afterPath="$PROJECT_DIR$/src/state/State.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Input/CustomizedInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Input/CustomizedInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Menu/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Menu/menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/button/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/button/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Error404.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Error404.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/OneDisplay/OneDisplay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/TwoDisplays/TwoDisplays.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/display/display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/display/display.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/displayWithInputs/DisplayWithInputs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/Counter-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/Counter-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/Store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/Store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/InitialStateforValue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/InitialStateforValue.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="counter-redux" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,6 +32,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,8 +56,18 @@
       <workItem from="1612709429407" duration="86000" />
       <workItem from="1612709517006" duration="1393000" />
       <workItem from="1612712014114" duration="1028000" />
-      <workItem from="1612719066578" duration="4214000" />
+      <workItem from="1612719066578" duration="4354000" />
+      <workItem from="1612810988771" duration="68000" />
+      <workItem from="1616187603838" duration="1894000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor with esLint">
+      <created>1612723414139</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612723414139</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,5 +96,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor with esLint" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor with esLint" />
   </component>
 </project>

@@ -1,24 +1,12 @@
 import React from 'react';
 import { Button, ButtonGroup, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppRootStateType } from '../../../state/Store';
+import { useObserver } from 'mobx-react';
 import CustomizedInputs from '../../Common/Input/CustomizedInput';
-import {
-  changeMaxValueAC,
-  changeStartValueAC,
-  clickSetButtonAC,
-  increaseByOneAC,
-  InitialStateType,
-  resetCurrentValueAC,
-} from '../../../state/Counter-reducer';
+import { appState } from '../../../state/State';
 
 const OneDisplay: React.FC = () => {
-  const values = useSelector<AppRootStateType, InitialStateType>(
-    (state) => state.values
-  );
-  const dispatch = useDispatch();
-
+  const values = appState;
   const maxValueError =
     values.maxValue <= values.startValue || values.maxValue < 0; // условие для ошибки для поля с макс значением
   const startValueError =
@@ -39,19 +27,19 @@ const OneDisplay: React.FC = () => {
     values.displayStatusForOneDisplay; // дисейбл для кн ресет
 
   const addOneValueCounter = () => {
-    dispatch(increaseByOneAC());
+    appState.increaseValue();
   }; // обработчик кнопки адд
   const resetValueCounter = () => {
-    dispatch(resetCurrentValueAC());
+    appState.resetCurrentValue();
   }; // обработчик ресета
   const onChangeForMaxValue = (i: number) => {
-    dispatch(changeMaxValueAC(i));
+    appState.changeMaxValue(i);
   }; // обработчик изменения макс инпута
   const onChangeForStartValue = (i: number) => {
-    dispatch(changeStartValueAC(i));
+    appState.changeStartValue(i);
   }; // обработчик изменения старт инпута
   const onClickSetButtonHandler = () => {
-    dispatch(clickSetButtonAC());
+    appState.clickSetButton();
   }; // обработчик нажатия на SET
 
   const useStyles = makeStyles({
@@ -87,7 +75,7 @@ const OneDisplay: React.FC = () => {
   });
   const classes = useStyles();
 
-  return (
+  return useObserver(() => (
     <Grid classes={{ root: classes.main }} container>
       <Grid container direction="row" justify="center" alignItems="center">
         <Grid classes={{ root: classes.forContainer }} item xs={12} sm={5}>
@@ -156,7 +144,7 @@ const OneDisplay: React.FC = () => {
         </Grid>
       </Grid>
     </Grid>
-  );
+  ));
 };
 
 export default OneDisplay;
